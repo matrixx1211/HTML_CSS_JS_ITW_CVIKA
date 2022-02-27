@@ -1,0 +1,93 @@
+/* Barvy */
+:root {
+	--grey: #656565;
+	--light-brown-light-bg: #b15e23;
+	--light-brown-dark-bg: #d5a17c;
+	--dark-brown: #3c1f0a;
+	--white: #ffffff;
+	--black: #000000;
+}
+
+#foo {
+	color: var(--grey);
+}
+
+/* Pro všechny */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: var(--white);
+}
+a:hover {
+	color: #656565;
+}
+
+/* Hlavička */
+header {
+	background-color: var(--dark-brown);
+	width: 100%;
+	padding: 1em 2em;
+}
+.heading {
+	color: var(--white);
+}
+.sub-heading {
+	color: var(--light-brown-dark-bg);
+}
+
+/* Tabulka */
+table {
+	border: 3px solid black;
+}
+
+th {
+	background-color: peachpuff;
+	border-top: 2px dotted black;
+	border-left: 2px dotted black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+	color: grey;
+}
+
+td {
+	border-top: 1px solid grey;
+	border-bottom: 1px solid darkgrey;
+}
+
+/* Navigace */
+.nav-list li a {
+	color: var(--white)
+}
+
+/* Kontejner */
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto
+}
+
+@media (min-width:768px) {
+	.container {
+		width: 750px
+	}
+}
+
+@media (min-width:992px) {
+	.container {
+		width: 970px
+	}
+}
+
+@media (min-width:1200px) {
+	.container {
+		width: 1170px
+	}
+}
