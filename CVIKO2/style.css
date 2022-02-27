@@ -1,93 +1,170 @@
 /* Barvy */
 :root {
-	--grey: #656565;
-	--light-brown-light-bg: #b15e23;
-	--light-brown-dark-bg: #d5a17c;
-	--dark-brown: #3c1f0a;
-	--white: #ffffff;
-	--black: #000000;
-}
-
-#foo {
-	color: var(--grey);
+  --grey: #cccccc;
+  --light-brown-light-bg: #b15e23;
+  --light-brown-dark-bg: #d5a17c;
+  --dark-brown: #3c1f0a;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 /* Pro všechny */
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-a:link {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-	color: var(--white);
-}
-a:hover {
-	color: #656565;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Hlavička */
+h1 {
+  font-style: italic;
+}
 header {
-	background-color: var(--dark-brown);
-	width: 100%;
-	padding: 1em 2em;
+  background-color: var(--dark-brown);
+  width: 100%;
+  padding-top: 3rem;
 }
-.heading {
-	color: var(--white);
+header ul {
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
 }
-.sub-heading {
-	color: var(--light-brown-dark-bg);
+header ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+header ul li a {
+  text-decoration: none;
+}
+#heading {
+  color: var(--white);
+}
+#heading:link {
+  color: var(--white);
+  text-decoration: none;
+}
+#heading:visited {
+  color: var(--white);
+  text-decoration: none;
+}
+#heading:hover {
+  color: var(--grey);
+  text-decoration: none;
+}
+#sub-heading {
+  color: var(--light-brown-dark-bg);
+}
+.nav-list li a {
+  color: var(--white);
+}
+.nav-list li a:hover {
+    color: var(--grey);
+}
+
+/* Hlavní obsah */
+hr {
+  border: 1px dotted var(--light-brown-light-bg);
+}
+section h2 {
+  color: var(--light-brown-light-bg);
+  margin: 1rem 0;
+}
+section a {
+  color: var(--dark-brown);
+  font-size: large;
+  font-weight: bold;
+}
+section a:link {
+  text-decoration: none;
+}
+section img {
+  display: block;
+}
+section p {
+  margin: 0 0 1rem 0;
+}
+#menu-bullet {
+  margin-left: 3rem;
+  padding-bottom: 1rem;
+}
+#about {
+  background-color: var(--grey);
+  padding-bottom: 3rem;
+}
+
+/* Patička */
+footer {
+    background-color: var(--dark-brown);
+    padding: 1rem 0 1rem 0;
+}
+footer {
+    color: var(--white);
+}
+footer h2 {
+    color: var(--white);
+    font-weight: 500;
+}
+footer a:link {
+    color: var(--light-brown-dark-bg);
+    text-decoration: none;
+}
+footer a:hover {
+    color: var(--grey);
+}
+#contact dl {
+    width: 20rem;
+}
+#contact dt {
+    float: left;
+}
+#contact dd {
+    float: inline-end;
+    text-align: right;
+}
+#related-subject ul {
+    list-style: url(./img/footer_list_bullet.gif);
+    list-style-position: inside;
+    padding-left: 1rem;
 }
 
 /* Tabulka */
 table {
-	border: 3px solid black;
+  border: 3px solid black;
 }
-
 th {
-	background-color: peachpuff;
-	border-top: 2px dotted black;
-	border-left: 2px dotted black;
-	border-right: 2px solid black;
-	border-bottom: 2px solid black;
-	color: grey;
+  background-color: peachpuff;
+  border-top: 2px dotted black;
+  border-left: 2px dotted black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  color: grey;
 }
-
 td {
-	border-top: 1px solid grey;
-	border-bottom: 1px solid darkgrey;
-}
-
-/* Navigace */
-.nav-list li a {
-	color: var(--white)
+  border-top: 1px solid grey;
+  border-bottom: 1px solid darkgrey;
 }
 
 /* Kontejner */
 .container {
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-@media (min-width:768px) {
-	.container {
-		width: 750px
-	}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }
 
-@media (min-width:992px) {
-	.container {
-		width: 970px
-	}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
 }
 
-@media (min-width:1200px) {
-	.container {
-		width: 1170px
-	}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
