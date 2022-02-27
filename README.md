@@ -1,1 +1,2 @@
-# HTML_CSS_JS_ITW_CVIKA
+# HTML, CSS, JavaScript webovka
+Webová stránka tvořená postupně od základu do předmětu ITW na VUT FIT.
