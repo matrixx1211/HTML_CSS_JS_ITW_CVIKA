@@ -99,32 +99,32 @@ h1 {
   opacity: 0;
 }
 
-#a-about:hover+#img-about {
+#a-about:hover + #img-about {
   opacity: 1;
   transform: translate(-4rem, 2rem);
 }
 
-#a-subject:hover+#img-subject {
+#a-subject:hover + #img-subject {
   opacity: 1;
   transform: translate(-2.6rem, 2rem);
 }
 
-#a-result:hover+#img-result {
+#a-result:hover + #img-result {
   opacity: 1;
   transform: translate(-4rem, 2rem);
 }
 
-#a-exercise:hover+#img-exercise {
+#a-exercise:hover + #img-exercise {
   opacity: 1;
   transform: translate(-2rem, 2rem);
 }
 
-#a-contact:hover+#img-contact {
+#a-contact:hover + #img-contact {
   opacity: 1;
   transform: translate(-4rem, 2rem);
 }
 
-#a-related-subject:hover+#img-related-subject {
+#a-related-subject:hover + #img-related-subject {
   opacity: 1;
   transform: translate(-5rem, 2rem);
 }
@@ -169,13 +169,69 @@ section p {
   padding-top: 1rem;
 }
 
-#related-subject a{
+#related-subject a {
   color: var(--white);
 }
-.left, .right {
-  
+.columns {
+  display: flex;
+  flex-direction: row;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
-
+.columns::after {
+  content: "";
+  background-color: var(--grey);
+  position: absolute;
+  left: 100%;
+  width: 100vh;
+  height: 100%;
+}
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+}
+.left {
+  flex: 6;
+  padding-right: 1rem;
+}
+.right {
+  flex: 4;
+  background-color: var(--grey);
+  padding-left: 1rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.subject {
+  display: flex;
+  padding: 1rem 0rem;
+}
+.subject_left {
+  flex: 1;
+}
+.subject_right {
+  flex: 4;
+}
+.exercise {
+  display: flex;
+  justify-content: center;
+}
+#exercise a {
+  display: block;
+  margin: 1rem 0rem;
+}
+.exercise_left {
+  flex: 1;
+  align-items: center;
+}
+.exercise_right {
+  flex: 4;
+}
 
 /* Patička */
 footer {
@@ -223,6 +279,7 @@ footer a:hover {
 /* Tabulka */
 table {
   border: 3px solid black;
+  width: 100%;
 }
 
 th {
@@ -241,26 +298,8 @@ td {
 
 /* Kontejner */
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 960px;
   margin-right: auto;
   margin-left: auto;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
